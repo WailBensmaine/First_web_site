@@ -1,5 +1,7 @@
 /* Start variables */
-
+:root{
+    --main-color: #10cab7;
+}
 /* End variables */
 
 /* Start global rules */
@@ -49,8 +51,8 @@ body{
 /* End global rules */
 
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    /* height: 100px; */
 }
 
 /* Start Header */
@@ -113,6 +115,7 @@ body{
     right: 0;
     min-width: 200px;
     top: calc(100% + 15px);
+    z-index: 1;  /*used to display the list over other elemnts (remove it and check if you wanna see its benefits) */
     display: none; 
 }
 
@@ -147,3 +150,37 @@ body{
 }
 
 /* End Header */
+
+
+/* Start Landing Section */
+.landing {
+    background-image: url(../images/mountain.png);
+    background-size:cover;
+    height: calc(100vh - 90.4px);    /* The space between the '-' operator and the factors is a must */
+    position: relative;  /* I did this here so i can put the intro text in the center of the landing div because when i white position = absolute in the intro text it will search for the closest father with a position != static and it will positionne it self relativly to this father */
+}
+
+.landing .intro-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50% , -50%);
+    width: 320px;
+    max-width: 100%;  /* This property is used to be sure that the width of the intro text will never go out of the screen in case the container is smaller than the given width (in our case 320px) */
+}
+
+.landing .intro-text h1{
+    margin: 0;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* End Landing Section */

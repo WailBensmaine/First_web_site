@@ -232,7 +232,11 @@ body{
 
 .features .feat {
     padding: 20px;
-    text-align: center;
+}
+@media (max-width: 767px) {
+    .features .feat {
+        text-align: center;
+    }
 }
 
 .features img {
@@ -282,10 +286,6 @@ body{
 @media (max-width: 767px) {
     .services .services-content .srv {
         text-align: center;
-    }
-    .services .services-content .col:last-child {
-        display: flex;
-        justify-content: center;
     }
 }
 
@@ -363,3 +363,98 @@ body{
 }
 
 /* End Portfolio */
+/* Start About */
+.about{
+    padding-top: var(--section-padding);
+    padding-bottom: calc(2 * var(--section-padding));
+}
+.about-content {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;   
+}
+
+@media (max-width: 991px){
+    .about-content {
+        flex-direction: column;
+        justify-content: center;   
+    }
+}
+
+.about-content .image{
+    width: 350px;
+    height: 300px;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .about-content .image{
+        display: none;
+    }
+}
+
+.about .image img {
+    width: 450px;
+    height: 300px;
+    max-width: 100%;
+}
+
+@media (max-width: 991px) {
+    .about .image {
+        margin: 0 auto 60px;
+    }
+}
+
+.about-content .image::before{
+    content: '';
+    background-color: #ebeced;
+    top: -40px;
+    left: -15px;
+    width: 100px;
+    height: calc(100% + 80px);
+    position: absolute;
+    z-index: -1;
+}
+.about-content .image::after{
+    content: '';
+    position: absolute;
+    width: 73px;
+    height: 200px;
+    border-left: 60px solid var(--main-color);
+    border-bottom: 55px solid var(--main-color);
+    top: -40px;
+    right: -91px;
+    z-index: -1;
+}
+@media (max-width: 991px) {   
+    .about-content .image::after,
+    .about-content .image::before{
+        display: none; 
+    }
+}
+.about .text{
+    flex-basis: calc(100% - 52%);
+}
+
+@media (max-width: 767px){
+    .about .text {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+.about .text p:first-of-type{
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+.about .text hr{
+    width: 50%;
+    display: inline-block;
+    border-color: var(--main-color);
+}
+.about .text p:last-of-type{
+    line-height: 1.5;
+    color: #777;
+}
+
+/* End About */

@@ -298,6 +298,11 @@ body{
     position: relative;
     text-align: center;
 }
+@media (max-width: 1199px) {
+    .services .image {
+        display: none;
+    }
+}
 .services .image img {
     width: 260px;
     max-width: 100%;
@@ -314,11 +319,6 @@ body{
     z-index: -1;
 }
 
-@media (max-width: 1199px) {
-    .services .image {
-        display: none;
-    }
-}
 
 .services p{
     font-weight: 300;
@@ -456,5 +456,55 @@ body{
     line-height: 1.5;
     color: #777;
 }
-
 /* End About */
+/* Start Contact */
+.contact {
+    margin-top: var(--section-padding);
+    margin-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+.contact .contact-content {
+    margin-top: var(--section-padding);
+    margin-bottom: var(--section-padding);
+    text-align: center;
+}
+.contact .label {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--second-color);
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+.contact .link {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--main-color);
+}
+.contact .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 17px;
+}
+.contact i {
+    margin-left: 10px;
+    color: var(--second-color);
+}
+@media (max-width: 767px) {
+    .contact .label, .contact .link {
+        font-size: 26px;
+    }
+    .contact .social{
+        flex-wrap: wrap;   
+    }
+    .contact .social p {
+        width: 100%;
+    }
+    .contact i {
+        margin: 0 20px;
+    }
+}
+/* End Contact */

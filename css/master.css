@@ -508,3 +508,20 @@ body{
     }
 }
 /* End Contact */
+/* Start Footer */
+.footer{
+    height: 80px;
+    display: flex;
+    font-size: 18px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--second-color);
+}
+.footer span {
+    margin: 0 2px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+/* End Footer */
